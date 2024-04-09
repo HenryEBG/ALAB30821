@@ -13,6 +13,7 @@ let initPlant = 20
 let initArea = minSpace*initPlant
 let numWeeks
 let plantGrows
+let percentPlanted
 /**
  * Example with 1 week
  */
@@ -21,7 +22,7 @@ numWeeks=1
 // calculate the area cover with plants
 plantGrows=(numWeeks-1)*2*initArea+initArea//calculate area occuped
 //calculate percent of area cover with plants
-let percentPlanted=plantGrows/area
+percentPlanted=plantGrows/area
 
 // Console logs to get the answers
 console.log(`The total area is ${area} square meters`)
@@ -30,7 +31,7 @@ console.log(`The area used is ${plantGrows} square meters`)
 console.log(`The percent used is ${percentPlanted*100}%`)
 console.log(`***************************************************`)
 
-
+//control flow
 if(percentPlanted>0.8){
   console.log(`The garde need to be Pruned, exceed the 80% of the capacity`)
   
@@ -40,6 +41,65 @@ if(percentPlanted>0.8){
 }else{
   console.log(`The garden need to be Planted, is under the 50% of the capacity`)
 }
+
+
+
+/**
+ * Example with 1 week
+ */
+// number of weeks
+numWeeks=2
+// calculate the area cover with plants
+plantGrows=(numWeeks-1)*2*initArea+initArea//calculate area occuped
+//calculate percent of area cover with plants
+percentPlanted=plantGrows/area
+
+// Console logs to get the answers
+console.log(`The total area is ${area} square meters`)
+console.log(`Number of weeks are ${numWeeks}`)
+console.log(`The area used is ${plantGrows} square meters`)
+console.log(`The percent used is ${percentPlanted*100}%`)
+
+// control flow 
+if(percentPlanted>0.8){
+  console.log(`The garde need to be Pruned, exceed the 80% of the capacity`)
+}else if(percentPlanted>0.5){
+  console.log(`The garden is Monitored, is between 50% ad 80% of the capacity`)
+}else{
+  console.log(`The garden need to be Planted, is under the 50% of the capacity`)
+}
+console.log(`***************************************************`)
+
+
+
+/**
+ * Example with 1 week
+ */
+// number of weeks
+numWeeks=3
+// calculate the area cover with plants
+plantGrows=(numWeeks-1)*2*initArea+initArea//calculate area occuped
+//calculate percent of area cover with plants
+percentPlanted=plantGrows/area
+
+// Console logs to get the answers
+console.log(`The total area is ${area} square meters`)
+console.log(`Number of weeks are ${numWeeks}`)
+console.log(`The area used is ${plantGrows} square meters`)
+console.log(`The percent used is ${percentPlanted*100}%`)
+
+//control flow
+if(percentPlanted>0.8){
+  console.log(`The garde need to be Pruned, exceed the 80% of the capacity`)
+  
+
+}else if(percentPlanted>0.5){
+  console.log(`The garden is Monitored, is between 50% ad 80% of the capacity`)
+}else{
+  console.log(`The garden need to be Planted, is under the 50% of the capacity`)
+}
+console.log(`***************************************************`)
+
 
 
 /**
@@ -56,7 +116,7 @@ let areaNeeded=0
 // variable to save radius of the area needed
 let radiusNeeded=0
 
-areaNeeded=((initArea*numWeeks*2)-area)/0.8
+areaNeeded=((initArea+(initArea*(numWeeks-1)*2))-area)/0.8
 radiusNeeded=Math.sqrt(areaNeeded/PI)
 console.log(`we need an additional space of a radius of ${radiusNeeded} to not pruned the garden for ${numWeeks} weeks`)
 
