@@ -105,6 +105,7 @@ console.log(`***************************************************`)
 /**
  * Part 2: Thinking Bigger
  */
+
 // initial plants
 initPlant=100
 // initial area
@@ -116,7 +117,9 @@ let areaNeeded=0
 // variable to save radius of the area needed
 let radiusNeeded=0
 
+//calculate areaNeeded
 areaNeeded=((initArea+(initArea*(numWeeks-1)*2))-area)/0.8
+//calculate radiusNeeded use Math.sqrt 
 radiusNeeded=Math.sqrt(areaNeeded/PI)
 console.log(`we need an additional space of a radius of ${radiusNeeded} to not pruned the garden for ${numWeeks} weeks`)
 
