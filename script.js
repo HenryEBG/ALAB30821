@@ -167,7 +167,7 @@ plantGrows=Math.pow(2,numWeeks-1)*initArea//(numWeeks-1)*2*initArea+initArea//ca
 //calculate percent of area cover with plants
 percentPlanted=plantGrows/area
 if(percentPlanted>1){
-  throw(`Error of judgement, there is not enough space in a ${area} square meters to begin with ${initPlant} plants for 10 weeks. We need ${(percentPlanted-1)*100}% equal to ${plantGrows-area} square meters more of garden.`)
+  throw(`Error of judgement, there is not enough space in a ${area} square meters to begin with ${initPlant} plants for 1 week. We need ${(percentPlanted-1)*100}% equal to ${plantGrows-area} square meters more of garden.`)
 }
 // Console logs to get the answers
 console.log(`The total area is ${area} square meters`)
